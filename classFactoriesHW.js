@@ -1,9 +1,9 @@
 //Hamster
 class Hamster{
     constructor(owner,name,price){
-        this.owner = "";
+        this.owner = owner;
         this.name = name;
-        this.price = 15;
+        this.price = price;
     }
     wheelRun(){
         console.log("squeak squeak");
@@ -15,16 +15,15 @@ class Hamster{
         return this.price;
     }
 }
-
 class Person{
     constructor(name,age,height,weight,mood,hamsters,bankAmount){
         this.name = name;
-        this.age = 0;
-        this.height = 0;
-        this.weight = 0;
-        this.mood = 0;
-        this.hamsters = [];
-        this.bankAccount = 0;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+        this.mood = mood;
+        this.hamsters = hamsters;
+        this.bankAmount = bankAmount;
     }
     getName(){
         return this.name;
@@ -38,12 +37,13 @@ class Person{
     greet(){
         console.log(this.name);
     }
-    eat(){
+    eat(num){
         weight++;
         mood++;
     }
-    exercise(){
+    exercise(n){
         weight--;
+        return n;
     }
     ageUp(){
         age++;
@@ -57,6 +57,22 @@ class Person{
         mood += 10;
         bankAcocunt = bankAccount-getPrice();
     }
+    // eat(num){
+    //     return num;
+    // }
 }
 
+//Create a story with your Person class
+const peep = new Person("Timmy",5,60)
+peep.exercise = 5;
+// console.log(peep.exercise)
+console.log(peep.age)
+//hamster named Gus, cost $15, owner is Timmy:
+const ham = new Hamster("Timmy","Gus",15)
+console.log(ham)
+console.log(ham.price);
+//Have Timmy eat twice
+console.log(`Timmy ate ${peep.eat(2)} times`);
+//Have Timmy exercise twice
+console.log(`Timmy exercised ${peep.exercise(2)}`);
 

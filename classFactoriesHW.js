@@ -76,3 +76,27 @@ console.log(`Timmy ate ${peep.eat(2)} times`);
 //Have Timmy exercise twice
 console.log(`Timmy exercised ${peep.exercise(2)}`);
 
+//Chef Make Dinner
+class Dinner{
+    constructor(str,appetizer,entree,dessert){
+        this.str = str;
+        this.appetizer = appetizer;
+        this.entree = entree;
+        this.dessert = dessert;
+    }
+}
+class Chef{
+    constructor(ingrdient1,ingredient2,ingredient3){
+        // if(ingredient1 === "apple" &&)
+
+    }
+    salad(){
+        console.log(`salad`);
+    }
+    fries(){
+        console.log(`fries`);
+    }
+    mixBowl(){
+        console.log(`mixBowl`)
+    }
+}

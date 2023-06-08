@@ -70,33 +70,26 @@ timmy.exercise = 5;
 timmy.age += 9;
 timmy.buyHamster();
 ham.hamsterName = "Gus"
+timmy.age += 15;
+timmy.eat += 2;
+timmy.exercise += 2;
 console.log(timmy);
 console.log(ham)
 
-// //Chef Make Dinner
-// class Dinner{
-//     constructor(){
-//         this.str = str;
-//         this.appetizer = appetizer;
-//         this.entree = entree;
-//         this.dessert = dessert;
-//     }
-//     appet(){
-        
-//     }
-// }
-// class Chef{
-//     constructor(){
-//         this.
-
-//     }
-//     salad(){
-        
-//     }
-//     fries(){
-//         console.log(`fries`);
-//     }
-//     mixBowl(){
-//         console.log(`mixBowl`)
-//     }
-// }
+//Chef Make Dinner
+class Dinner{
+    constructor(){
+        this.appetizer = appetizer;
+        this.entree = entree;
+        this.dessert = dessert;
+    }
+}
+class Chef{
+    constructor(){
+    }
+    cook(dish1,dish2,dish3){
+        const newDinner = new Dinner(dish1,dish2,dish3);
+        console.log(`The new dinner is ${newDinner}`);
+    }
+}
+cook.newDinner("spring roll","steak","cake");
